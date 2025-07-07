@@ -1,0 +1,48 @@
+<div class="container-pagina">
+    <div class="breadcrumbs">
+        <a href="index.html">Início</a> / <span>Blusas e Camisas</span>
+    </div>
+</div>
+
+<div class="container-pagina layout-flex">
+
+    <aside class="sidebar">
+        <div class="sidebar-bloco">
+            <h3>Categorias</h3>
+            <ul class="lista-categorias">
+                <li><a href="blusas.html">Blusas e Camisas</a></li>
+                <li><a href="calcas-saias.html">Calças e Saias</a></li>
+                <li><a href="vestidos.html">Vestidos e Macacões</a></li>
+                <li><a href="casacos.html">Casacos e Jaquetas</a></li>
+                <li class="sale-link"><a href="#">SALE</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-bloco">
+            <h3>Filtros</h3>
+            <form class="filtro-preco">
+                <label for="preco-de">Preço</label>
+                <div>
+                    <input type="text" id="preco-de" placeholder="de">
+                    <span>-</span>
+                    <input type="text" id="preco-ate" placeholder="até">
+                    <button type="submit">&gt;</button>
+                </div>
+            </form>
+        </div>
+    </aside>
+
+    <main class="conteudo-principal">
+        <div class="barra-ordenar">
+            <label for="ordenar-por">Ordenar por:</label>
+            <select name="ordenar-por" id="ordenar-por">
+                <option value="mais-novos">Mais Novos</option>
+                <option value="preco-menor">Menor Preço</option>
+                <option value="preco-maior">Maior Preço</option>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            </div>
+    </main>
+</div>
