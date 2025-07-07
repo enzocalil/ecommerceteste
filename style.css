@@ -1,0 +1,122 @@
+/* Importando uma fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset básico e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Estilos do Header e da Navegação Principal */
+.main-header {
+    background-color: #c0392b; /* Vermelho escuro, similar ao exemplo */
+    color: #ffffff;
+    padding: 0 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Estilos do Menu Principal */
+.nav-menu {
+    display: flex;
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+.nav-menu > li > a {
+    padding: 25px 5px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu > li > a:hover {
+    color: #f1c40f; /* Cor de destaque ao passar o mouse */
+}
+
+/* Ícones da Direita */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9em;
+}
+
+.nav-icons .icon-link {
+    transition: color 0.3s ease;
+}
+
+.nav-icons .icon-link:hover {
+     color: #f1c40f;
+}
+
+/* ---- Estilos do Submenu ---- */
+
+/* Container do item que terá o submenu */
+.menu-item-has-children {
+    position: relative; /* Essencial para o posicionamento do submenu */
+}
+
+/* O submenu em si */
+.sub-menu {
+    position: absolute;
+    top: 100%; /* Posiciona logo abaixo do item pai */
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    width: 220px; /* Largura do submenu */
+    z-index: 100;
+
+    /* Efeito de aparição suave */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sub-menu a:hover {
+    background-color: #f5f5f5;
+    color: #c0392b; /* Vermelho */
+}
+
+/* ---- Lógica de Aparição do Submenu (via CSS Hover) ---- */
+.menu-item-has-children:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
